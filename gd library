@@ -1,0 +1,18 @@
+<?php
+
+$imageWidth = 400;
+$imageHeight = 200;
+$image = imagecreatetruecolor($imageWidth, $imageHeight);
+
+$backgroundColor = imagecolorallocate($image, 255, 255, 255); // White background
+$textColor = imagecolorallocate($image, 0, 0, 0); // Black text
+
+imagefill($image, 0, 0, $backgroundColor);
+$text = "Hello, GD Library!";
+$textX = 50;
+$textY = 100;
+imagestring($image, 5, $textX, $textY, $text, $textColor);
+header('Content-type: image/png');
+imagepng($image);
+imagedestroy($image);
+?>
