@@ -13,7 +13,7 @@ function showHint(str) {
         document.getElementById("txtHint").innerHTML = this.responseText; 
       } 
     } 
-    xmlhttp.open("GET", "gethint.php?q="+str, true); 
+    xmlhttp.open("GET", "hint.php?q="+str, true); 
     xmlhttp.send(); 
   } 
 } 
